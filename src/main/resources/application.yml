@@ -2,6 +2,8 @@ server:
   port: 8001
 
 spring:
+  thymeleaf:
+    cache: false
   datasource:
     url: jdbc:mysql://localhost:3306/test
     type: com.alibaba.druid.pool.DruidDataSource
@@ -12,3 +14,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+logging:
+  level:
+    org:
+      springframework:
+        security: info
